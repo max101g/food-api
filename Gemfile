@@ -18,6 +18,8 @@ gem "active_model_serializers"
 
 gem "rack-cors"
 
+gem "bcrypt"
+
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
