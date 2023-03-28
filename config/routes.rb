@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :users, only: [:index, :show, :create]
   resources :userposts, only: [:index, :show]
-  resources :posts, only: [:index, :show]
+  resources :posts, only: [:index, :show, :create]
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   

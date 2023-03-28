@@ -10,8 +10,9 @@ class PostsController < ApplicationController
     end
 
     def create
-        user = User.create!(post_params)
-        render json: user
+        user = User.find(session[:user_id])
+        post = user.posts.create!(post_params)
+        render json: post
     end
 
     private
