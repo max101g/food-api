@@ -3,11 +3,11 @@ class UsersController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
     rescue_from ActionController::UnpermittedParameters, with: :handle_errors
 
-    skip_before_action :authorize, only: [:create]
+    skip_before_action :authorize, only: [:create, :index]
 
     def index
-        users = User.all
-        render json: users
+        user = User.last
+        render json: user
     end
 
     def show
@@ -18,7 +18,6 @@ class UsersController < ApplicationController
     def create
         user = User.create!(user_params)
         session[:user_id] = user.id
-        render json: user
     end
 
     private
@@ -28,8 +27,9 @@ class UsersController < ApplicationController
     end
 
     def user_params
-        params.permit(:name, :username, :email, :password, :image)
+        params.require(:user).permit(:name, :username, :email, :password, :image)
     end
+      
 
     def render_not_found_response
         render json: { error: "Power not found" }, status: :not_found 
