@@ -11,26 +11,10 @@ class PostsController < ApplicationController
     end
   
     def create
-      # byebug
-      # user = User.find_by(id: session[:user_id])
-      # post = user.posts.create(post_params)
-      # render json: post
       post = Post.create!(post_params)
       render json: post
     end
 
-    # def create
-    #   byebug
-    #   post = Post.new(post_params)
-    #   post.user_id = session[:user_id]
-    #   if post.save
-    #     render json: post
-    #   else
-    #     render 'new'
-    #   end
-    # end
-    
-  
     def update
       post = find_post
       post.update!(post_params)
