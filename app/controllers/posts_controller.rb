@@ -11,10 +11,25 @@ class PostsController < ApplicationController
     end
   
     def create
-      user = User.find_by(id: session[:user_id])
-      post = user.posts.create!(post_params)
+      # byebug
+      # user = User.find_by(id: session[:user_id])
+      # post = user.posts.create(post_params)
+      # render json: post
+      post = Post.create!(post_params)
       render json: post
     end
+
+    # def create
+    #   byebug
+    #   post = Post.new(post_params)
+    #   post.user_id = session[:user_id]
+    #   if post.save
+    #     render json: post
+    #   else
+    #     render 'new'
+    #   end
+    # end
+    
   
     def update
       post = find_post
@@ -29,7 +44,7 @@ class PostsController < ApplicationController
     end
   
     def post_params
-      params.permit(:location, :image)
+      params.require(:post).permit(:location, :image)
     end
   
     def render_not_found_response

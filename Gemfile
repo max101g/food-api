@@ -20,6 +20,8 @@ gem "rack-cors"
 
 gem "bcrypt"
 
+gem 'byebug'
+
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
