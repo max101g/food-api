@@ -21,7 +21,7 @@ end
     Post.create(image:"https://bit.ly/42Ufp9Q", location:Faker::Address.city)
     Post.create(image:"https://bit.ly/42ZcAUK", location:Faker::Address.city)
     Post.create(image:"https://bit.ly/3zoxJdv", location:Faker::Address.city)
-    Post.create(image:"https://bit.ly/3TZUzle", location:Faker::Address.city)
+    Post.create(image:"https://bit.ly/3ZA5eUO", location:Faker::Address.city)
     Post.create(image:"https://bit.ly/3zjTL1f", location:Faker::Address.city)
     Post.create(image:"https://bit.ly/3ZCvWMG", location:Faker::Address.city)
     Post.create(image:"https://cnn.it/3M8d3yf", location:Faker::Address.city)
