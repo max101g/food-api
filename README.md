@@ -52,3 +52,13 @@ Things you may want to cover:
  * The password that they provide is hashed via the "has_secure_password"
  * Then the user is given a session which is set as the user's id
 
+
+
+### Frontend repo link ###
+link: "https://github.com/max101g/food-gram"
+
+### Frontend deployed link ###
+link: "https://642744e0fe257522f5a45050--soft-bombolone-5f8259.netlify.app"
+
+### Backend deployed link ###
+link: "https://dish.onrender.com"
