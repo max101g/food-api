@@ -58,7 +58,7 @@ Things you may want to cover:
 link: "https://github.com/max101g/food-gram"
 
 ### Frontend deployed link ###
-link: "https://642744e0fe257522f5a45050--soft-bombolone-5f8259.netlify.app"
+link: "https://food-gram-q87j.vercel.app"
 
 ### Backend deployed link ###
-link: "https://dish.onrender.com"
+link: "https://foodie-mitf.onrender.com"
